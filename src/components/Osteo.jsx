@@ -9,7 +9,7 @@ import Image from 'react-bootstrap/Image';
 function Osteo() {
   return (
        <Col className='picture__carousel'>
-        <Image src={Osteopatia}/>
+        <Image src={Osteopatia} className="picture"/>
         <h2 className='text__style'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt molestias modi iure alias, quidem repellat voluptas ipsa dolorem at autem ut itaque obcaecati dolorum debitis sequi, corrupti iusto in!</h2>
         </Col>
   );

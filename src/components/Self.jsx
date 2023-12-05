@@ -11,7 +11,7 @@ function Self() {
 
   return (
        <Col className='picture__carousel'>
-        <Image src={Marcinek}/>
+        <Image src={Marcinek} className="picture"/>
         <div className='text__style'>
         <h1 > {translate('me')}</h1>
         <h4 > Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt molestias modi iure alias, quidem repellat voluptas ipsa dolorem at autem ut itaque obcaecati dolorum debitis sequi, corrupti iusto in!</h4>
