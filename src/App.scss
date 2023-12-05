@@ -1,0 +1,54 @@
+.leaflet-container{
+  width: 50vw;
+  height: 50vh;
+}
+.carousel__container{
+  background: grey;
+  height: 94vh !important;
+  width: 100vw !important;
+}
+.picture__carousel{
+  display: flex;
+  justify-content: center;
+  height: 94vh;
+  position: relative;
+}
+.text__size{
+  font-weight: 800;
+  font-family: Georgia, serif;
+}
+
+.map__style{
+  display: flex;
+  justify-content: center;
+}
+.menu__redirect__button{
+padding-right: 0.4%;
+padding-left: 0.4%;
+}
+.menu__redirect__gray__button{
+  max-width: 57px
+}
+
+.language__switch{
+  font-weight: 700;
+}
+.form-check-input:checked{
+  background-color: grey;
+  border-color: grey;
+}
+.fizjo__label{
+  padding-bottom: 60%;
+  padding-right: 10%;
+}
+.general__container{
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+.text__style{
+  position: absolute;
+  right: 10%;
+  left: 60%;
+  top: 10%;
+}
