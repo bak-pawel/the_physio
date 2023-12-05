@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/the_physio/static/css/main.491eb6e5.css",
+    "main.js": "/the_physio/static/js/main.f11faba4.js",
+    "static/js/787.c8eddd2d.chunk.js": "/the_physio/static/js/787.c8eddd2d.chunk.js",
+    "static/media/Fizjo.png": "/the_physio/static/media/Fizjo.b53efcb290a051794a2f.png",
+    "static/media/Osteo.png": "/the_physio/static/media/Osteo.5f3fbd7e179940f10239.png",
+    "static/media/logo_to_navbar.png": "/the_physio/static/media/logo_to_navbar.192b1b04b0f179a11a29.png",
+    "static/media/Marcinek.JPG": "/the_physio/static/media/Marcinek.de9e9bf81e6cfde9397c.JPG",
+    "index.html": "/the_physio/index.html",
+    "main.491eb6e5.css.map": "/the_physio/static/css/main.491eb6e5.css.map",
+    "main.f11faba4.js.map": "/the_physio/static/js/main.f11faba4.js.map",
+    "787.c8eddd2d.chunk.js.map": "/the_physio/static/js/787.c8eddd2d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.491eb6e5.css",
+    "static/js/main.f11faba4.js"
+  ]
+}
