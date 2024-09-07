@@ -16,47 +16,47 @@ function CarouselElement() {
   };
 
   return (
-    <Carousel interval={3000} activeIndex={index} onSelect={handleSelect} className='carousel__container'>
+    <Carousel interval={3000} activeIndex={index} onSelect={handleSelect} controls={false} className='carousel__container'>
        <Carousel.Item>
        <Col className='picture__carousel'>
         <Image src={Marcinek} roundedCircle className='carousel__picture'/>
         </Col>
-        <Carousel.Caption>
+        {/* <Carousel.Caption> */}
           <h1 className='text__size'>{translate('hello')}</h1>
-        </Carousel.Caption>
+        {/* </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
           <Col className='picture__carousel'>
 
         <Image src={Osteo} roundedCircle className='carousel__picture'/>
 
-        <Carousel.Caption>
+        {/* <Carousel.Caption> */}
           <h1 className='fizjo__label text__size'>{translate('physiotherapy')}</h1>
-        </Carousel.Caption>
+        {/* </Carousel.Caption> */}
           </Col>
-        <Carousel.Caption>
-        </Carousel.Caption>
+        {/* <Carousel.Caption>
+        </Carousel.Caption> */}
       </Carousel.Item>
 
       <Carousel.Item>
       <Col className='picture__carousel'>
         
       <Image src={Fizjo} roundedCircle className='carousel__picture'/>
-        <Carousel.Caption>
+        {/* <Carousel.Caption> */}
           <h1 className='text__size'>{translate('training')}</h1>
-        </Carousel.Caption>
+        {/* </Carousel.Caption> */}
           </Col>
-        <Carousel.Caption>
-        </Carousel.Caption>
+        {/* <Carousel.Caption> */}
+        {/* </Carousel.Caption> */}
       </Carousel.Item>
 
       <Carousel.Item>
       <Col className='picture__carousel'>
         
       <Image src={Osteo} roundedCircle className='carousel__picture'/>
-        <Carousel.Caption>
+        {/* <Carousel.Caption> */}
           <h1 className='fizjo__label text__size'>{translate('osteopathy')}</h1>
-        </Carousel.Caption>
+        {/* </Carousel.Caption> */}
           </Col>
       </Carousel.Item>
     </Carousel>
