@@ -1,0 +1,53 @@
+/* Styl dla przycisku menu */
+.menu-button {
+    background-color: #7e8286;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-position{
+    position: fixed;
+    right: 10vh;
+}
+  
+  .menu-button:hover {
+    background-color: #404346;
+  }
+  
+  /* Styl dla rozwijanego menu */
+  .dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 150px;
+    z-index: 50;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #ce3333;
+    display: block;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #272a2d;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: rgb(242, 3, 3);
+  }
+  

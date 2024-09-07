@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import '../App.scss';
 import Osteopatia from "../images/Osteo.png";
-import Marcinek from '../images/Marcinek.JPG';
-import Fizjo from '../images/Fizjo.png';
-import Col from 'react-bootstrap/Col';
+import { Col, Row } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
+import translate from './i18n/translate';
 
 function Osteo() {
   return (
-       <Col className='picture__carousel'>
-        <Image src={Osteopatia} className="picture"/>
-        <h2 className='text__style'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt molestias modi iure alias, quidem repellat voluptas ipsa dolorem at autem ut itaque obcaecati dolorum debitis sequi, corrupti iusto in!</h2>
-        </Col>
+    <Row>
+      <Col className='d-flex align-items-center justify-content-center row-hight'>
+        <Image src={Osteopatia} className="picture" />
+      </Col>
+      <Col className='d-flex align-items-center justify-content-center row-hight'>
+        <div className='text__style'>
+          <h1 > {translate('osteo header')}</h1>
+          <h4 className='text__style'> {translate("osteo")}</h4>
+        </div></Col>
+    </Row>
   );
 }
 export default Osteo;
