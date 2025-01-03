@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../App.scss';
 import Marcinek from '../images/Marcinek.JPG';
-import Osteo from '../images/Osteo.png';
-import Fizjo from '../images/Fizjo.png';
 import { Col, Row } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import translate from './i18n/translate';

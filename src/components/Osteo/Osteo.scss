@@ -1,0 +1,24 @@
+.picture {
+  height: 20vh;
+  width: auto;
+}
+.background{
+    background-image: url("/images/Osteo.jpeg"); 
+    width: 100vw;
+    margin: 0px;
+    height: 100vh;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.font_size{
+  font-size: 2vh;
+}
+
+
+
+
