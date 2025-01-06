@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Osteo.scss"
-import { Col, Row } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
-import translate from '../i18n/translate';
+import {  Row } from 'react-bootstrap';
 
 function Osteo() {
   return (

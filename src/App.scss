@@ -1,4 +1,3 @@
-
 .text__style{
 max-width: 49vw;
 max-height: 80vh;
@@ -10,20 +9,18 @@ padding-bottom: 10vh;
   overflow: auto;
 }
 
-
 .background {
-  background-image: url('/images/Logo.png');
+  background-image: url('./images/Main.png');
   background-size: 100vw 100vh;
   width: 100vw;
   height: 100vh;
- 
+
 }
 
 .page {
   height: 100vh;
   width: 100vw;
   overflow: auto;  /* Firefox legacy */
-  
 }
 
 .row-hight{

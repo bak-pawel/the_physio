@@ -1,10 +1,11 @@
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown, Form, FormCheck, Navbar, ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
+import { Dropdown,Navbar, ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 import Logo from "../../images/Logo.png";
 import './Menu.scss';
-import { faBars, faCalendar,faSquareInstagram } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Menu(props) {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(getLangageFromStorage);

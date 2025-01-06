@@ -3,9 +3,10 @@
   width: auto;
 }
 .background{
-    background-image: url("/images/Main.png"); 
+    background-image: url("./../../images/Main.png"); 
     width: 100vw;
     margin: 0px;
+    padding: 0px;
     height: 100vh;
     background-size: auto 100%;
     background-position: center;
@@ -18,7 +19,3 @@
 .font_size{
   font-size: 10vh;
 }
-
-
-
-
