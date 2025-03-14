@@ -1,12 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Image, Row, } from 'react-bootstrap';
-import Logo from "../../images/Logo.png";
+import { Row, } from 'react-bootstrap';
 import './Main.scss';
+import Osteo from '../Osteo/Osteo';
 const Main = () => {
-    return (
-        <Row className='background font_size'>
-            <Image src={Logo} className='picture' />
-        </Row>
+
+  return (
+      <Row className='justify-content-center'>
+        <Osteo/>
+        <Training/>
+        <Osteo/>
+      </Row>
+
+        // <Row className='background font_size'>
+        //     <Image src={Logo} className='picture' />
+        // </Row>
     )
 }
 export default Main;

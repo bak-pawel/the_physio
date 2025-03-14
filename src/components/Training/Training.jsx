@@ -3,7 +3,7 @@ import "./Osteo.scss"
 import { Card } from 'react-bootstrap';
 import { useGlobalContext } from '../../ThemeHook';
 
-function Osteo() {
+function Training() {
  
   const { theme } = useGlobalContext();
 

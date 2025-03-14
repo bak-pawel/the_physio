@@ -1,26 +1,33 @@
 
-.position{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  background: none;
-  position: fixed;
-  width: 100vw;
-  margin: 0px;
-  padding: 0px;
-}
-.custom-dropdown-toggle::after {
-  display: none;
-}
-.custom-switch .form-check-input:checked ~ .form-check-label::before {
-  background-color: gray !important;
-  border-color: gray !important;
-}
+// .position{
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 700;
+//   background: none;
+//   position: fixed;
+//   width: 100vw;
+//   margin: 0px;
+//   padding: 0px;
+// }
+// .custom-dropdown-toggle::after {
+//   display: none;
+// }
+// .custom-switch .form-check-input:checked ~ .form-check-label::before {
+//   background-color: gray !important;
+//   border-color: gray !important;
+// }
 
-.custom-switch .form-check-input:focus ~ .form-check-label::before {
-  box-shadow: none !important;
+// .custom-switch .form-check-input:focus ~ .form-check-label::before {
+//   box-shadow: none !important;
+// }
+// .text_color{
+//   color: whitesmoke;
+// }
+.max_size{
+  width: 99vw;
 }
-.text_color{
-  color: whitesmoke;
+.bg_colours{
+  background: none;
+  color: none;
 }
 
 

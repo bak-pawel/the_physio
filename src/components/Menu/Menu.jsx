@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown,Navbar, ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
-import Logo from "../../images/Logo.png";
+import { Nav, Navbar } from 'react-bootstrap';
 import './Menu.scss';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
+import { useGlobalContext } from '../../ThemeHook';
 
 function Menu(props) {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(getLangageFromStorage);
+  const { theme } = useGlobalContext();
 
   function getLangageFromStorage() {
     return localStorage.getItem("lang") === undefined ? "PL" : localStorage.getItem("lang")
@@ -19,41 +21,31 @@ function Menu(props) {
     localStorage.setItem("lang", event.target.value)
   }
 
+  const [isExpanded, setIsExpanded] = useState(window.innerWidth >= 576);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsExpanded(window.innerWidth >= 576);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
-      <Navbar className='position justify-content-around'>
-        <ToggleButtonGroup type="checkbox" value={lang}>
-          <ToggleButton id="tbg-btn-2" value={"EN"} variant="outline-secondary" onChange={(e) => changeLanguage(e)}>
-            EN
-          </ToggleButton>
-          <ToggleButton id="tbg-btn-3" value={"PL"} variant="outline-secondary" onChange={(e) => changeLanguage(e)}>
-            PL
-          </ToggleButton>
-        </ToggleButtonGroup>
-        <Navbar.Brand href="/" className='text_color'>
-          <img
-            alt=""
-            src={Logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />
-          REHASTEON GROUP
-        </Navbar.Brand>
-        <Dropdown show={open} onToggle={() => setOpen(!open)}>
-          <Dropdown.Toggle
-            as="button"
-            className="btn btn-outline-secondary custom-dropdown-toggle"
-            id="dropdown-button-drop-down-centered"
-          >
-            <FontAwesomeIcon icon={faBars} />
-          </Dropdown.Toggle>
-          <Dropdown.Menu align={"end"} variant='dark'>
-            <Dropdown.Item  href='/'>main</Dropdown.Item>
-            <Dropdown.Item  href='osteo'>osteo</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Action 3</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+      <Navbar bg={theme} data-bs-theme={theme} expand="sm" className="bg-body-tertiary max_size">
+        <Navbar.Brand href="/" className='ms-5'>Rehasteon Group</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav"  className={isExpanded ? 'justify-content-end me-5' : ''}>
+          <Nav>
+            <Nav.Link href="/calendar">Calendar</Nav.Link>
+            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link href="/mentoring">Mentoring</Nav.Link>
+          <ThemeSwitcher />
+            <Nav.Link href="/login"><FontAwesomeIcon icon={faArrowRightToBracket} /></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
       {props.children}
     </>
