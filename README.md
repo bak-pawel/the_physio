@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# code-with-quarkus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-## Available Scripts
+If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
-In the project directory, you can run:
+## Running the application in dev mode
 
-### `npm start`
+You can run your application in dev mode that enables live coding using:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell script
+./mvnw quarkus:dev
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
-### `npm test`
+## Packaging and running the application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application can be packaged using:
 
-### `npm run build`
+```shell script
+./mvnw package
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
+Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want to build an _über-jar_, execute the following command:
 
-### `npm run eject`
+```shell script
+./mvnw package -Dquarkus.package.jar.type=uber-jar
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Creating a native executable
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can create a native executable using:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```shell script
+./mvnw package -Dnative
+```
 
-## Learn More
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell script
+./mvnw package -Dnative -Dquarkus.native.container-build=true
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
 
-### Code Splitting
+If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Related Guides
 
-### Analyzing the Bundle Size
+- REST ([guide](https://quarkus.io/guides/rest)): A Jakarta REST implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+- REST Jackson ([guide](https://quarkus.io/guides/rest#json-serialisation)): Jackson serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it
+- Quinoa ([guide](https://quarkiverse.github.io/quarkiverse-docs/quarkus-quinoa/dev/index.html)): Develop, build, and serve your npm-compatible web applications such as React, Angular, Vue, Lit, Svelte, Astro, SolidJS, and others alongside Quarkus.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Provided Code
 
-### Making a Progressive Web App
+### Quinoa
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Quinoa codestart added a tiny Vite app in src/main/webui. The page is configured to be visible on <a href="/quinoa">/quinoa</a>.
 
-### Advanced Configuration
+[Related guide section...](https://quarkiverse.github.io/quarkiverse-docs/quarkus-quinoa/dev/index.html)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+### REST
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Easily start your REST Web Services
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
