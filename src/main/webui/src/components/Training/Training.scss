@@ -1,0 +1,38 @@
+.align-card{
+  margin-top: 1vh;
+  width: 30vw;
+  height: 40vh;
+}
+.card-background {
+  position: relative;
+  color: white; /* Opcjonalnie, aby tekst był widoczny na ciemnym tle */
+}
+
+.card-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../images/Main.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.card-body {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.card-title-bold {
+  font-weight: 700;
+  font-size: 50px;
+}
+.card-text-bold {
+  font-weight: 500;
+  font-size: 30px;
+}
